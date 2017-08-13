@@ -35,6 +35,11 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.buttonLoad').click(function(e) {
+		alert('Loading Content...');
+	});
+
+
 	$('.shopWrapper-item').click(function(e) {
 		// let hName = $(this, 'h3');
 		// console.log(hName);
