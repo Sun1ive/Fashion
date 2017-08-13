@@ -13,6 +13,7 @@
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"> -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.css">
 <link rel="stylesheet" href="_libs/normalize.min.css">
 <!-- <link rel="stylesheet" href="_libs/animate.min.css"> -->
 <link rel="stylesheet" href="_styles/style.min.css">
@@ -23,6 +24,48 @@
 
 			<div class="firstHeader">
 				<div class="firstHeader-logo"><a href="#">Logo</a></div>
+
+<div class="dropdown">
+		  <div class="dropdown-trigger">
+		    <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu3">
+		      <span>Click me</span>
+		      <span class="icon is-small">
+		        <i class="fa fa-angle-down" aria-hidden="true"></i>
+		      </span>
+		    </button>
+		  </div>
+  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+    <div class="dropdown-content">
+      <a href="#" class="dropdown-item">
+        Overview
+      </a>
+      <a href="#" class="dropdown-item">
+        Modifiers
+      </a>
+      <a href="#" class="dropdown-item">
+        Grid
+      </a>
+      <a href="#" class="dropdown-item">
+        Form
+      </a>
+      <a href="#" class="dropdown-item">
+        Elements
+      </a>
+      <a href="#" class="dropdown-item">
+        Components
+      </a>
+      <a href="#" class="dropdown-item">
+        Layout
+      </a>
+      <hr class="dropdown-divider">
+      <a href="#" class="dropdown-item">
+        More
+      </a>
+    </div>
+  </div>
+</div>
+
+
 				<ul class="firstHeader-menu">
 					<li class="hasMenu"><a href="#">Menu</a>
 						<ul class="subMenu">
@@ -49,17 +92,17 @@
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 	  <div class="carousel-inner" role="listbox">
 	    <div class="carousel-item active">
-	    	<div class="tag">Fashion</div>
+	    	<div class="tagName">Fashion</div>
 	      <img class="d-block img-fluid" src="_img/image.png" alt="First slide">
 	      <div class="button">Buy now</div>
 	    </div>
 	    <div class="carousel-item">
-	    <div class="tag">Fashion</div>
+	    <div class="tagName">Fashion</div>
 	      <img class="d-block img-fluid" src="_img/image.png" alt="First slide">
 	      <div class="button">Buy now</div>
 	    </div>
 	    <div class="carousel-item">
-	    <div class="tag">Fashion</div>
+	    <div class="tagName">Fashion</div>
 	      <img class="d-block img-fluid" src="_img/image.png" alt="First slide">
 	      <div class="button">Buy now</div>
 	    </div>
@@ -111,8 +154,18 @@
 		</header>
 
 		<main>
-			<section class="shop">
-				<div class="shopWrapper">
+
+	<section class="shop">
+		<div class="shopWrapper">
+			<div class="modal">
+		  <div class="modal-background"></div>
+		  <div class="modal-content">
+		    <p class="image">
+		      <img src="http://placehold.it/200x100" alt="">
+		    </p>
+		  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
 					<div class="shopWrapper-item product">
 						<img src="_img/fire.png">
 						<h3>popular product</h3>
