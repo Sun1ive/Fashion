@@ -225,6 +225,68 @@ footer
 	min-height 240px
 	background-color: #363637
 	.footer
+		display flex
+		align-items center
 		max-width 1100px
-		min-height 160px
+		min-height inherit
 		margin 0 auto
+		&-firstBox
+			col-3()
+			height 170px
+			&_logo
+				font(24px,"PD BlackItalic",#900,#fff)
+				height calc(240px - 150px)
+				margin-left 20px
+			&_socials
+				padding 0
+				display inline-flex
+				margin 0
+				a
+					margin 0 10px
+					font-size: 14px
+					color #999
+		&-secondBox
+			col-7()
+			height 170px
+			&_links
+				display inline-flex
+				padding 0
+				margin 0
+			for x in 2 3 4 5
+				li:nth-child({x})
+					margin 0 10px
+				li:first-child
+					margin-right: 10px
+				a
+					text-transform uppercase
+					font(12px,Montserrat-Regular,400,#fff)
+			&_subtext
+				margin-top 60px
+				text-transform uppercase
+				font(12px,Montserrat-Regular,400,#fff)
+				letter-spacing .1rem
+			input[type='email']
+				margin-top 20px
+				width 320px
+				height 40px
+				padding-left 20px
+			.myButton
+				width 140px
+				height 40px
+				position relative
+				background-color: #FFF
+				border none
+				cursor pointer
+				top -1px
+				font(12px,Montserrat-Regular,400,#363637)
+				margin-left 20px
+
+.footer-thirdBox
+	height 170px
+	col-3()
+	text-transform uppercase
+	font(12px,Montserrat-Regular,400,#fff)
+	&_address
+		margin-top 35px
+	&_contacts
+		margin-top 5px
