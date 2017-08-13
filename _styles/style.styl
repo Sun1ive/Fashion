@@ -51,6 +51,7 @@ main
 		col-xxs-5()
 		xs(text-align, left)
 		xs(padding-left, 35px)
+		xxs(padding-left, 15px)
 		a
 			font(24px,"PD BlackItalic",900,#fff)
 	&-sign
@@ -78,20 +79,28 @@ main
 		.hasMenu
 			position relative
 			z-index: 1392
-			&:after
-				content: "\003E"
-				position absolute
-				font(12px,Montserrat-Regular,400,#fff)
+			.fa
+				position: absolute
 				top 3px
-				right 3px
-				transform rotate(90deg)
+				right -2px
+			// &:after
+			// 	content: ">"
+			// 	position absolute
+			// 	font(12px,Montserrat-Regular,400,#fff)
+			// 	top 3px
+			// 	right 3px
+			// 	transform rotate(90deg)
 			.subMenu
 				position absolute
+				background-color: #FFF
 				display none
 				left -5px
 				padding 0
 				li
 					padding 5px 0
+					border-bottom 1px solid #d3d3d3
+					a
+						color #454547
 		a
 			font(12px,Montserrat-Regular,400,#fff)
 			margin 0 15px
@@ -418,4 +427,11 @@ footer
 	opacity 0.3
 
 .modal
-	z-index: 9494
+	z-index: 335
+	.content
+		text-align center
+		img
+			margin 15px auto
+		h3
+		p
+			margin 20px
