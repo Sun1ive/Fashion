@@ -66,13 +66,12 @@ main
 	position relative
 	height: 620px
 	text-align center
-	// overflow hidden
 	&-fashion
 		position absolute
 		font(150px,"PD Bold",700,#0021c4)
 		text-transform: uppercase
 		left 23%
-		top 25%
+		top 18%
 	&-img
 		position absolute
 		top -50px
@@ -118,7 +117,6 @@ main
 			border-left 1px solid #d3d3d3
 			&-text
 				h3
-					margin 0
 					margin-left: 20px
 					font(18px,Montserrat-Bold,700,#000)
 				p
@@ -126,3 +124,52 @@ main
 					text-align left
 					margin-left 20px
 					font(14px,Montserrat-Regular,300,#999999)
+
+
+.shopWrapper
+	max-width 1280px
+	min-height 1180px
+	row-flex()
+	margin 0 auto
+	padding-top 110px
+	&-item
+		display flex
+		flex-flow column wrap
+		align-items center
+		justify-content center
+		col-3()
+		height 290px
+		border 1px solid #d3d3d3
+		margin 0 15px
+		.info
+			align-self flex-start
+			margin 20px 0 0 30px
+			h3
+				font(18px,"PD Regular",400,#232323)
+				margin-bottom 10px
+			p
+				display inline-block
+				&:nth-child(2)
+					margin-right 15px
+					text-decoration:line-through
+					font(14px,Montserrat-Regular,400,#999999)
+				&:last-child
+					font(14px,Montserrat-Regular,400,$blue)
+			
+	.product
+		background-color: #000
+		border none
+		text-transform: uppercase
+		h3
+			font(18px,Montserrat-Bold,700,#fff)
+			margin-top 35px
+		p
+			font(14px,Montserrat-Regular,400,#fff)
+			margin-top 50px
+			position relative
+			&:after
+				content "\2192"
+				position absolute
+				font-size: 14px
+				top -1px
+				right -15px
