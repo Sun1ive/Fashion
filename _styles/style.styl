@@ -126,13 +126,26 @@ main
 					font(14px,Montserrat-Regular,300,#999999)
 
 
+
 .shopWrapper
 	max-width 1280px
-	min-height 1180px
+	// min-height 1180px
 	row-flex()
 	margin 0 auto
 	padding-top 110px
+	.buttonLoad
+		width 150px
+		height 40px
+		background-color: $blue
+		border-radius 25px
+		font(16px,PT Sans,400,#fff)
+		text-transform: uppercase
+		text-align center
+		line-height 40px
+		cursor pointer
+		margin 15px auto 25px auto
 	&-item
+		cursor: pointer
 		display flex
 		flex-flow column wrap
 		align-items center
@@ -140,7 +153,11 @@ main
 		col-3()
 		height 290px
 		border 1px solid #d3d3d3
-		margin 0 15px
+		margin 15px
+		transition .3s;
+		&:hover
+			transform scale(1.1)
+			box-shadow: 0px 0px 70px 0px rgba(0,0,0,0.75);
 		.info
 			align-self flex-start
 			margin 20px 0 0 30px
@@ -173,3 +190,20 @@ main
 				font-size: 14px
 				top -1px
 				right -15px
+
+.event
+	min-height 400px
+	background-image: url('../_img/event.png')
+	display flex
+	flex-flow column
+	align-items center
+	justify-content center
+	&-h2
+		text-transform uppercase
+		font(16px,Montserrat-Regular,400,#fff)
+	&-h1
+		font(36px,"PD Regular",400,#fff)
+		line-height 36px
+		margin 20px 0
+	&-date
+		font(16px,Montserrat-Regular,400,#fff)
