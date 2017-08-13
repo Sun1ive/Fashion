@@ -1,0 +1,96 @@
+//====================
+// import
+// ===================
+@import ("smart-grid.styl");
+@import ("settings.styl")
+//====================
+// code
+// ===================
+
+#container
+	max-width 1366px
+	margin 0 auto !important
+	min-height 100vh
+
+header
+	min-height 720px
+	background-color: $blue
+
+.firstHeader
+	min-height 100px
+	display: flex
+	align-items center
+	&-logo
+		text-align center
+		col-2()
+		font(24px,"PD BlackItalic",900,#fff)
+	&-sign
+		col-2()
+		text-transform: uppercase
+		a
+			font(12px,Montserrat-Regular,400,#fff)
+			margin 0 15px
+	&-menu
+		display inline-flex
+		justify-content center
+		col-9()
+		margin 0
+		padding 0
+		text-transform: uppercase
+		.hasMenu
+			position relative
+			&:after
+				content: "\003E"
+				position absolute
+				font(12px,Montserrat-Regular,400,#fff)
+				top 3px
+				right 3px
+				transform rotate(90deg)
+			.subMenu
+				position absolute
+				display none
+				left -16px
+				padding 0
+				li
+					padding 10px
+		a
+			font(12px,Montserrat-Regular,400,#fff)
+			margin 0 15px
+
+.secondHeader
+	position relative
+	height: 620px
+	text-align center
+	overflow hidden
+	&-fashion
+		position absolute
+		font(150px,"PD Bold",700,#0021c4)
+		text-transform: uppercase
+		left 23%
+		top 25%
+	&-img
+		position absolute
+		top -20px
+		left 28%
+		z-index 300
+	&-text
+		font(72px,"PD Bold",700,#fff)
+		line-height 82px
+		z-index 310
+		position absolute
+		left 33%
+		top 45%
+	&-button
+		width 200px
+		height 50px
+		border-radius 25px
+		background-color: $blue
+		text-transform: uppercase
+		line-height 50px
+		font(18px,Montserrat-Regular,400,#fff)
+		cursor pointer
+		letter-spacing .1rem
+		position absolute
+		top 63%
+		left 40%
+		z-index: 313
