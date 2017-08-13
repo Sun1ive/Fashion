@@ -28,17 +28,30 @@ main
 	&-logo
 		text-align center
 		col-2()
-		font(24px,"PD BlackItalic",900,#fff)
+		col-sm-4()
+		col-xs-6()
+		col-xxs-5()
+		a
+			font(24px,"PD BlackItalic",900,#fff)
 	&-sign
 		col-2()
+		col-lg-3()
+		col-sm-4()
+		col-xs-6()
+		col-xxs-9()
+		flex-wrap nowrap
+		text-align center
 		text-transform: uppercase
 		a
 			font(12px,Montserrat-Regular,400,#fff)
-			margin 0 15px
+			margin 0 10px
 	&-menu
 		display inline-flex
 		justify-content center
 		col-9()
+		col-lg-8()
+		xs(display, none)
+		flex-wrap wrap
 		margin 0
 		padding 0
 		text-transform: uppercase
@@ -64,68 +77,62 @@ main
 			margin 0 15px
 
 .secondHeader
-	position relative
-	height: 620px
-	text-align center
-	&-fashion
-		position absolute
-		font(150px,"PD Bold",700,#0021c4)
-		text-transform: uppercase
-		left 23%
-		top 18%
-	&-img
-		position absolute
-		top -50px
-		left 28%
-		z-index 300
-	&-text
-		font(72px,"PD Bold",700,#fff)
-		line-height 82px
-		z-index 310
-		position absolute
-		left 33%
-		top 45%
-	&-button
-		width 200px
-		height 50px
-		border-radius 25px
-		background-color: $blue
-		text-transform: uppercase
-		line-height 50px
-		font(18px,Montserrat-Regular,400,#fff)
-		cursor pointer
-		letter-spacing .1rem
-		position absolute
-		top 63%
-		left 40%
-		z-index: 313
-	&-feature
-		display flex
-		min-width 1280px
-		min-height 150px
+	display flex
+	justify-content center
+	align-items center
+	flex-flow column wrap
+	#carouselExampleControls
+		height: 670px
+		// overflow hidden
+	&-features
+		row-flex()
+		col-12()
+		height: 150px
 		background-color: #FFF
-		position absolute
-		z-index: 314
-		top 90%
-		left 45px
-		border: 1px solid #d5d5d6
+		overflow hidden
+		z-index: 333
+		border: 1px solid #d5d5d6;
 		border-radius 5px
-		.box
-			col-4()
+		&_box
+			col-3()
+			margin: 0 15px
 			display flex
-			justify-content center
 			align-items center
-			border-left 1px solid #d3d3d3
+			justify-content center
+			for x in 1 2 3
+				&:nth-child({x})
+					border-right 1px solid #d3d3d3
+			h2
+				font(18px,Montserrat-Regular,400,#000000)
 			&-text
-				h3
-					margin-left: 20px
-					font(18px,Montserrat-Bold,700,#000)
-				p
-					margin 5px 0
-					text-align left
-					margin-left 20px
-					font(14px,Montserrat-Regular,300,#999999)
+				margin-left 20px
 
+
+
+
+	.carousel-control-next
+		right: -90px
+	.carousel-control-prev
+		left: -100px
+	.carousel-item
+		.button
+			position absolute
+			width 140px
+			height: 40px
+			top 70%
+			left: 35%
+			background-color: $blue
+			border-radius 25px
+			font(14px,PT Sans,400,#fff)
+			text-transform uppercase
+			line-height 40px
+			text-align center
+			cursor pointer
+			transition .3s
+			letter-spacing .15 rem
+			&:hover
+				background-color: $blue - 15%
+				color: #fff - 15%
 
 
 .shopWrapper
@@ -133,7 +140,7 @@ main
 	// min-height 1180px
 	row-flex()
 	margin 0 auto
-	padding-top 110px
+	padding-top 30px
 	.buttonLoad
 		width 150px
 		height 40px
