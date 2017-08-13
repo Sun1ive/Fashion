@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	let docHeight = $(document).height();
-	let step = 2;
-	let scrollSpeed = docHeight / step;
-
 
 	function checkPos(){
 		let pos = $(window).scrollTop();
@@ -25,7 +21,7 @@ $(document).ready(function() {
 	$('.scrollTop').click(function(e) {
 		$('html, body').animate({
 			scrollTop: 0
-		}, scrollSpeed);
+		}, 1000);
 	});
 	$('.button').click(function(e) {
 		if ($('.dropdown').hasClass('is-active')) {
@@ -51,9 +47,6 @@ $(document).ready(function() {
 				type: "POST",
 				dataType: "json",
 				data: data,
-				success: function(data) {
-					console.log('its fine');
-				},
 				error: function(data) {
 					button.removeClass('working');
 				}
