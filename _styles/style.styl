@@ -44,6 +44,7 @@ main
 		text-transform: uppercase
 		.hasMenu
 			position relative
+			z-index: 1392
 			&:after
 				content: "\003E"
 				position absolute
@@ -54,10 +55,10 @@ main
 			.subMenu
 				position absolute
 				display none
-				left -16px
+				left -5px
 				padding 0
 				li
-					padding 10px
+					padding 5px 0
 		a
 			font(12px,Montserrat-Regular,400,#fff)
 			margin 0 15px
@@ -290,3 +291,29 @@ footer
 		margin-top 35px
 	&_contacts
 		margin-top 5px
+
+.scrollTop
+	width 40px
+	height 40px
+	background-color: #f0f0f0
+	position fixed
+	right 30px
+	bottom -70px
+	cursor pointer
+	border-radius 10px
+	transition .4s;
+	opacity: 0
+	&:after
+		content '\2191'
+		position absolute
+		top 0px
+		left 14px
+		font-size: 24px
+	&:hover
+		opacity 1
+		&:after
+			color: #000
+
+.showButton
+	bottom 30px
+	opacity 0.3
