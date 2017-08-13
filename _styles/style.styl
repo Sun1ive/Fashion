@@ -76,6 +76,7 @@ main
 			font(12px,Montserrat-Regular,400,#fff)
 			margin 0 15px
 
+
 .secondHeader
 	display flex
 	justify-content center
@@ -163,10 +164,6 @@ main
 			&-text
 				margin-left 20px
 
-
-
-
-	
 
 .shopWrapper
 	max-width 1280px
@@ -270,22 +267,30 @@ main
 			margin 20px 10px
 			col-xxs-12()
 
+
 footer
 	min-height 240px
 	background-color: #363637
 	.footer
 		display flex
 		align-items center
-		max-width 1100px
+		max-width 1200px
 		min-height inherit
 		margin 0 auto
+		sm(flex-flow, column wrap)
 		&-firstBox
+			display flex
+			flex-flow column wrap
+			justify-content center
+			align-items center
 			col-3()
 			height 170px
+			col-sm-12()
 			&_logo
 				font(24px,"PD BlackItalic",#900,#fff)
 				height calc(240px - 150px)
 				margin-left 20px
+				xs(font-size, 30px)
 			&_socials
 				padding 0
 				display inline-flex
@@ -293,22 +298,32 @@ footer
 				a
 					margin 0 10px
 					font-size: 14px
+					xs(font-size, 20px)
 					color #999
 					transition 0.3s
 					&:hover
 						color $blue + 20%
 		&-secondBox
 			col-7()
+			col-sm-12()
+			display flex
+			flex-flow column wrap
+			align-items center
 			height 170px
+			#sub
+				text-align center
 			&_links
 				display inline-flex
+				flex-wrap wrap
 				padding 0
 				margin 0
 			for x in 2 3 4 5
 				li:nth-child({x})
 					margin 0 10px
+					xxs(margin, 0 5px)
 				li:first-child
 					margin-right: 10px
+					xxs(margin-right, 5px)
 				a
 					text-transform uppercase
 					font(12px,Montserrat-Regular,400,#fff)
@@ -319,11 +334,13 @@ footer
 				letter-spacing .1rem
 			input[type='email']
 				margin-top 20px
-				width 320px
+				max-width 320px
 				height 40px
 				padding-left 20px
+				
 			.myButton
-				width 140px
+				max-width 140px
+				min-width 100px
 				height 40px
 				position relative
 				background-color: #FFF
@@ -332,16 +349,24 @@ footer
 				top -1px
 				font(12px,Montserrat-Regular,400,#363637)
 				margin-left 20px
+				xxs(width, 300px)
+				xxs(margin-top, 20px)
 
 .footer-thirdBox
 	height 170px
 	col-3()
+	col-sm-12()
 	text-transform uppercase
 	font(12px,Montserrat-Regular,400,#fff)
+	display: flex
+	flex-flow column wrap
+	align-items center
+	xs(margin-top, 20px)
 	&_address
 		margin-top 35px
 	&_contacts
 		margin-top 5px
+		xxs(margin-top, 30px)
 
 .scrollTop
 	width 40px
