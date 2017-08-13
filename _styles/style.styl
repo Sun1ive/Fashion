@@ -16,6 +16,11 @@ header
 	min-height 720px
 	background-color: $blue
 
+main
+	min-height 100vh
+	background-color: #FFF
+
+
 .firstHeader
 	min-height 100px
 	display: flex
@@ -61,7 +66,7 @@ header
 	position relative
 	height: 620px
 	text-align center
-	overflow hidden
+	// overflow hidden
 	&-fashion
 		position absolute
 		font(150px,"PD Bold",700,#0021c4)
@@ -70,7 +75,7 @@ header
 		top 25%
 	&-img
 		position absolute
-		top -20px
+		top -50px
 		left 28%
 		z-index 300
 	&-text
@@ -94,3 +99,30 @@ header
 		top 63%
 		left 40%
 		z-index: 313
+	&-feature
+		display flex
+		min-width 1280px
+		min-height 150px
+		background-color: #FFF
+		position absolute
+		z-index: 314
+		top 90%
+		left 45px
+		border: 1px solid #d5d5d6
+		border-radius 5px
+		.box
+			col-4()
+			display flex
+			justify-content center
+			align-items center
+			border-left 1px solid #d3d3d3
+			&-text
+				h3
+					margin 0
+					margin-left: 20px
+					font(18px,Montserrat-Bold,700,#000)
+				p
+					margin 5px 0
+					text-align left
+					margin-left 20px
+					font(14px,Montserrat-Regular,300,#999999)
