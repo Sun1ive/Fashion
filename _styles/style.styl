@@ -83,44 +83,36 @@ main
 	flex-flow column wrap
 	#carouselExampleControls
 		height: 670px
-		// overflow hidden
-	&-features
-		row-flex()
-		col-12()
-		height: 150px
-		background-color: #FFF
-		overflow hidden
-		z-index: 333
-		border: 1px solid #d5d5d6;
-		border-radius 5px
-		&_box
-			col-3()
-			margin: 0 15px
-			display flex
-			align-items center
-			justify-content center
-			for x in 1 2 3
-				&:nth-child({x})
-					border-right 1px solid #d3d3d3
-			h2
-				font(18px,Montserrat-Regular,400,#000000)
-			&-text
-				margin-left 20px
-
-
-
-
 	.carousel-control-next
 		right: -90px
+		sm(right,0)
 	.carousel-control-prev
 		left: -100px
+		sm(left,0)
 	.carousel-item
+		width: 800px
+		md(width, 600px)
+		sm(width, 100%)
+		img
+			margin 0 auto
+			max-width 100%
+		.tag
+			font(150px,"PD Bold",700,#0021c4)
+			md(font-size, 110px)
+			xs(display, none)
+			position absolute
+			text-transform: uppercase
+			z-index: -5
+			left 9%
+			top 20%
 		.button
 			position absolute
 			width 140px
 			height: 40px
 			top 70%
-			left: 35%
+			left: 40%
+			xs(left, 35%)
+			xxs(left, 30%)
 			background-color: $blue
 			border-radius 25px
 			font(14px,PT Sans,400,#fff)
@@ -134,10 +126,54 @@ main
 				background-color: $blue - 15%
 				color: #fff - 15%
 
+	&-features
+		row-flex()
+		col-12()
+		min-height 150px
+		background-color: #FFF
+		overflow hidden
+		z-index: 333
+		border: 1px solid #d5d5d6;
+		border-radius 5px
+		&_box
+			col-3()
+			col-md-6()
+			col-xs-12()
+			min-height 130px
+			xxs(border-bottom, 1px solid #d3d3d3)
+			sm(margin, 15px)
+			margin: 0 15px
+			display flex
+			align-items center
+			justify-content center
+			cursor pointer
+			transition .3s
+			border-radius 10px
+			&:hover
+				transform scale(1.1)
+				box-shadow: 0px 0px 90px 0px rgba(0,0,0,0.75);
+			for x in 1 2 3 4
+				&:nth-child({x})
+					xs(border-bottom, 1px solid #d3d3d3)
+			for x in 1 2 3
+				&:nth-child({x})
+					border-right 1px solid #d3d3d3
+					md(border-right, none)
+			for x in 1 2
+				&:nth-child({x})
+					md(border-bottom, 1px solid #d3d3d3)
+			h2
+				font(18px,Montserrat-Regular,400,#000000)
+			&-text
+				margin-left 20px
+
+
+
+
+	
 
 .shopWrapper
 	max-width 1280px
-	// min-height 1180px
 	row-flex()
 	margin 0 auto
 	padding-top 30px
