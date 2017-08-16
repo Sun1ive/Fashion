@@ -302,40 +302,75 @@ main
 
 #carouselExampleSlidesOnly
 	width 100%
+	margin 0 auto
 	.carousel-item
 		justify-content space-between
+		justify-content-xs(center)
 		align-items center
 		flex-wrap wrap
+		text-align center
+		// col-sm-6()
 		img
-			col-sm-6()
+			max-width 100%
 			margin 20px 10px
+			xxs(margin, 20px auto)
 			col-xxs-12()
 
 .timers
 	min-height 200px
 	background-color: $beige
 	display flex
+	flex-flow column wrap
 	justify-content center
 	align-items center
-	.incremental-counter
+	.timerText
+		font(30px,PT Sans,400,#454547)
+		margin-bottom 15px
+		text-align center
+	.clock
+		font(30px,PT Sans,400,#454547)
+		text-align center
 		display flex
-		font(70px,Montserrat-Bold,#900,#fff)
+		col-xs-12()
+		xs(font-size, 20px)
+		justify-content center
+		xxs(justify-content, center)
+		xxs(align-items, center)
+		ul
+			col-xxs-5()
+		span
+			xs(display, none)
+		
 
 .form
 	min-height 300px
 	display flex
-	justify-content center
 	align-items center
-	flex-flow column wrap
+	justify-content space-around
+	sm(flex-flow, column wrap)
+	.infoForm
+		display flex
+		flex-flow column wrap
+		align-items center
+		text-align center
+		justify-content center
+		width 50%
+		min-height inherit
+		col-xs-12()
+		h1
+			font(45px,PT Sans,700,#464646)
+			xxs(font-size, 25px)
+		p
+			padding-top 15px
+			font(24px,PT Sans,700,#464646)
+			xxs(font-size, 16px)
 	#form
-		display none
-		margin 15px 0
+		margin 15px auto
+		col-xxs-12()
 		border 1px solid #454547
 		padding 30px
 		border-radius 15px
-		box-shadow: 0px 0px 32px 1px rgba(0,0,0,1);
-	.hidden
-		display none !important
+		box-shadow: 0px 0px 35px 0px rgba(0,0,0,1);
 
 footer
 	min-height 240px
@@ -384,6 +419,7 @@ footer
 				text-align center
 			&_links
 				display inline-flex
+				xxs(justify-content,center)
 				flex-wrap wrap
 				padding 0
 				margin 0
@@ -400,13 +436,17 @@ footer
 			&_subtext
 				margin-top 60px
 				text-transform uppercase
-				font(12px,Montserrat-Regular,400,#fff)
-				letter-spacing .1rem
+				font(13px,PT Sans,400,#fff)
+				width 70%
+				margin 0 auto
+				margin-top 60px
 			input[type='email']
 				margin-top 20px
 				max-width 320px
 				height 40px
 				padding-left 20px
+			input[type="submit"]
+				font-family PT Sans
 				
 			.myButton
 				max-width 140px
@@ -420,7 +460,7 @@ footer
 				font(12px,Montserrat-Regular,400,#363637)
 				margin-left 20px
 				xxs(width, 300px)
-				xxs(margin-top, 20px)
+				xxs(margin, 20px 0)
 
 .footer-thirdBox
 	height 170px

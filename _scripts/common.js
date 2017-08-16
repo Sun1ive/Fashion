@@ -28,7 +28,8 @@ $(document).ready(function() {
 			scrollTop: 0
 		}, 1000);
 	});
-	$('.button').click(function(e) {
+
+	$('#dropdown').click(function(e) {
 		if ($('.dropdown').hasClass('is-active')) {
 			$('.dropdown').removeClass('is-active')
 		} else {
@@ -90,15 +91,22 @@ $(document).ready(function() {
 		return false
 	});
 
-	$('.is-link').click(function(e) {
-		$('#form').addClass('hidden');
-		$('.showForm').removeClass('hidden');
+	$('#sub').submit(function(e) {
+		e.preventDefault();
+		let data = $(this);
+		$.ajax({
+			type: "POST",
+			url: "subMail.php",
+			data: data.serialize()
+		}).done(function(data) {
+			console.log(data);
+		});
 	});
+});
 
-	$('.showForm').click(function() {
-		$(this).addClass('hidden');
-		$('#form').removeClass('hidden');
-		$('#form').css('display','block');
+$(window).on('load',function() {
+  let clock =  $('.clock').FlipClock(3600 * 24 * 3, {
+		clockFace: 'DailyCounter',
+		countdown: true
 	});
-
 });

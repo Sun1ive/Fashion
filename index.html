@@ -13,6 +13,7 @@
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"> -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+ <link rel="stylesheet" href="_libs/flipclock.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.css">
 <link rel="stylesheet" href="_libs/normalize.min.css">
 <!-- <link rel="stylesheet" href="_libs/animate.min.css"> -->
@@ -27,7 +28,7 @@
 
 <div class="dropdown">
 		  <div class="dropdown-trigger">
-			 <button class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu3">
+			 <button id="dropdown" class="button is-primary" aria-haspopup="true" aria-controls="dropdown-menu3">
 				<span>Click me</span>
 				<span class="icon is-small">
 				  <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -298,12 +299,15 @@
 </div>
 	</section>
 	<section class="timers">
-
+	<!-- <div id="getting-started"></div> -->
+	<div class="timerText">До конца акции осталось:</div>
+	<div class="clock"></div>
 	</section>
 
 <section class="form">
-<div class="control">
-    <button class="button is-primary showForm">Форма обратной связи</button>
+<div class="infoForm">
+	<h1>Оставьте Ваши данные и мы свяжемся с Вами!</h1>
+	<p>Оставьте заявку что-бы ничего не пропустить!</p>
 </div>
 
 <form id="form">
@@ -338,9 +342,6 @@
   <div class="control">
     <button type="submit" class="button is-primary">Отправить</button>
   </div>
-  <div class="control">
-    <button type="button" class="button is-link">Отменить</button>
-  </div>
 </div>
 
 </form>
@@ -368,9 +369,9 @@
 				<li><a href="#" rel="nofollow" target="_blank">Blog</a></li>
 			</ul>
 			<form id="sub">
-				<div class="footer-secondBox_subtext">Subscribe to news</div>
+				<div class="footer-secondBox_subtext">Подпишитесь на рассылку что бы получать свежие новости!</div>
 				<input type="email" name="email" id="email" placeholder="Email Adress">
-				<input type="submit" class="myButton" value="Submit"></input>
+				<input type="submit" class="myButton" value="Подписаться"></input>
 			</form>
 		</div>
 
@@ -392,7 +393,7 @@
 
 
 <script src="_libs/jquery-3.2.1.min.js"></script>
-<script src="_libs/jquery.incremental-counter.min.js"></script>
+<script src="_libs/flipclock.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script> -->
