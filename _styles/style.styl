@@ -14,17 +14,22 @@
 
 header
 	min-height 720px
-	background-color: $blue
+	background-color: $beige
 
 main
-	min-height 100vh
+	// min-height 100vh
 	background-color: #FFF
 
 
 .firstHeader
 	min-height 100px
+	position: fixed
+	z-index 535
+	max-width 1366px
+	width 100%
 	display: flex
 	align-items center
+	background-color: #000
 	.dropdown
 		vertical-align middle
 		position: relative
@@ -66,6 +71,8 @@ main
 		a
 			font(12px,Montserrat-Regular,400,#fff)
 			margin 0 10px
+			&:hover
+				color red
 	&-menu
 		display inline-flex
 		justify-content center
@@ -76,6 +83,10 @@ main
 		margin 0
 		padding 0
 		text-transform: uppercase
+		li
+			a
+				&:hover
+					color red
 		.hasMenu
 			position relative
 			z-index: 1392
@@ -83,34 +94,39 @@ main
 				position: absolute
 				top 3px
 				right -2px
-			// &:after
-			// 	content: ">"
-			// 	position absolute
-			// 	font(12px,Montserrat-Regular,400,#fff)
-			// 	top 3px
-			// 	right 3px
-			// 	transform rotate(90deg)
 			.subMenu
 				position absolute
 				background-color: #FFF
 				display none
+				top 35px
 				left -5px
 				padding 0
+				transition .3s
 				li
 					padding 5px 0
 					border-bottom 1px solid #d3d3d3
+					&:hover
+						transition .3s
+						background-color: #000
+						a
+							color #fff
 					a
 						color #454547
 		a
 			font(12px,Montserrat-Regular,400,#fff)
 			margin 0 15px
 
+.activeMenu
+	display block !important
+	position: relative
+	z-index 553
 
 .secondHeader
 	display flex
 	justify-content center
 	align-items center
 	flex-flow column wrap
+	padding-top 100px
 	#carouselExampleControls
 		height: 670px
 	.carousel-control-next
@@ -127,7 +143,7 @@ main
 			margin 0 auto
 			max-width 100%
 		.tagName
-			font(150px,"PD Bold",700,#0021c4)
+			font(150px,"PD Bold",700,#3F3F3F)
 			md(font-size, 110px)
 			xs(display, none)
 			position absolute
@@ -143,7 +159,8 @@ main
 			left: 40%
 			xs(left, 35%)
 			xxs(left, 30%)
-			background-color: $blue
+			background-color: #373737
+			border none
 			border-radius 25px
 			font(14px,PT Sans,400,#fff)
 			text-transform uppercase
@@ -201,7 +218,7 @@ main
 	.buttonLoad
 		width 150px
 		height 40px
-		background-color: $blue
+		background-color: #373737
 		border-radius 25px
 		font(16px,PT Sans,400,#fff)
 		text-transform: uppercase
@@ -289,12 +306,36 @@ main
 		justify-content space-between
 		align-items center
 		flex-wrap wrap
-		// md(flex-direction, column)
 		img
 			col-sm-6()
 			margin 20px 10px
 			col-xxs-12()
 
+.timers
+	min-height 200px
+	background-color: $beige
+	display flex
+	justify-content center
+	align-items center
+	.incremental-counter
+		display flex
+		font(70px,Montserrat-Bold,#900,#fff)
+
+.form
+	min-height 300px
+	display flex
+	justify-content center
+	align-items center
+	flex-flow column wrap
+	#form
+		display none
+		margin 15px 0
+		border 1px solid #454547
+		padding 30px
+		border-radius 15px
+		box-shadow: 0px 0px 32px 1px rgba(0,0,0,1);
+	.hidden
+		display none !important
 
 footer
 	min-height 240px

@@ -15,7 +15,12 @@ $(document).ready(function() {
 	});
 
 	$('.hasMenu').click(function(e) {
-		$('.subMenu').toggle('active');
+		e.preventDefault();
+		if($('.subMenu').hasClass('activeMenu')) {
+			$('.subMenu').removeClass('activeMenu');
+		} else {
+			$('.subMenu').addClass('activeMenu');
+		}
 	});
 
 	$('.scrollTop').click(function(e) {
@@ -63,24 +68,37 @@ $(document).ready(function() {
 
 
 	$('.shopWrapper-item').click(function(e) {
-		// let hName = $(this, 'h3');
-		// console.log(hName);
-		// let data = $(this);
-		// console.log(this);
-		// let out = '';
-
-		// for (let key in data) {
-		// 	out += `<div class="modal-content">`
-		// 	out += `<div class='content'>`,
-		// 	out += `<h2>+data[key].h2+</h2>`,
-		// 	out += `</div>`
-		// 	out += `</div>`
-		// }
-		// $('.modal').html(out);
 		$('.modal').addClass('is-active');
-
 	});
 	$('.modal-close').click(function(e) {
 		$('.modal').removeClass('is-active');
 	});
+
+	$('#form').submit(function(e) {
+		e.preventDefault();
+		let th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize()
+		}).done(function() {
+			alert('thanks');
+			// setTimeout(function() {
+			// 	th.trigger('reset');
+			// },1000);
+		});
+		return false
+	});
+
+	$('.is-link').click(function(e) {
+		$('#form').addClass('hidden');
+		$('.showForm').removeClass('hidden');
+	});
+
+	$('.showForm').click(function() {
+		$(this).addClass('hidden');
+		$('#form').removeClass('hidden');
+		$('#form').css('display','block');
+	});
+
 });
