@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	setTimeout(function() {
+		$('.preloader').addClass('done');
+	},1000);
+
 	function checkPos(){
 		let pos = $(window).scrollTop();
 		if(pos > "500") {
@@ -77,16 +81,13 @@ $(document).ready(function() {
 
 	$('#form').submit(function(e) {
 		e.preventDefault();
-		let th = $(this);
+		let data = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
-			data: th.serialize()
+			url: "./php/mail.php",
+			data: data.serialize()
 		}).done(function() {
 			alert('thanks');
-			// setTimeout(function() {
-			// 	th.trigger('reset');
-			// },1000);
 		});
 		return false
 	});
@@ -96,10 +97,10 @@ $(document).ready(function() {
 		let data = $(this);
 		$.ajax({
 			type: "POST",
-			url: "subMail.php",
+			url: "./php/subMail.php",
 			data: data.serialize()
-		}).done(function(data) {
-			console.log(data);
+		}).done(function() {
+			alert("Спасибо!");
 		});
 	});
 });

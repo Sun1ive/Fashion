@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>My Project</title>
+<title>Fashion!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,7 +9,7 @@
 <!-- <meta name="og:image" content="image"> -->
 <!-- Индексирует страницу -->
 <meta name="robots" content="index,follow">
-<!-- <link rel="shortcut icon" href="_img/favicon.ico"> -->
+<link rel="shortcut icon" href="_img/favicon.ico">
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"> -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -20,9 +20,14 @@
 <link rel="stylesheet" href="_styles/style.min.css">
 </head>
 <body>
+
+<div class="preloader">
+	<div class="loader"></div>
+</div>
+
+
 	<div id="container">
 		<header>
-
 			<div class="firstHeader">
 				<div class="firstHeader-logo"><a href="#">Logo</a></div>
 
@@ -299,8 +304,7 @@
 </div>
 	</section>
 	<section class="timers">
-	<!-- <div id="getting-started"></div> -->
-	<div class="timerText">До конца акции осталось:</div>
+	<div class="timerText">До конца акции -40% осталось:</div>
 	<div class="clock"></div>
 	</section>
 
@@ -346,6 +350,13 @@
 
 </form>
 	</section>
+
+<section class="promo">
+	<div class="container">
+		
+	</div>
+</section>
+	
 </main>
 <footer>
 	<div class="footer">
@@ -370,7 +381,7 @@
 			</ul>
 			<form id="sub">
 				<div class="footer-secondBox_subtext">Подпишитесь на рассылку что бы получать свежие новости!</div>
-				<input type="email" name="email" id="email" placeholder="Email Adress">
+				<input type="email" name="email" id="email" placeholder="Email Adress" required>
 				<input type="submit" class="myButton" value="Подписаться"></input>
 			</form>
 		</div>
@@ -396,9 +407,6 @@
 <script src="_libs/flipclock.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script> -->
-<!-- <script src="https://unpkg.com/vue"></script> -->
-<!-- <script src="_libs/vue.js"></script> -->
 <script src="dist/common.min.js"></script>
 <!-- <script src="_scripts/common.js"></script> -->
 </body>
