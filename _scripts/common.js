@@ -40,7 +40,7 @@ $(document).ready(function() {
 		$('.dropdown').addClass('is-active');
 		}
 	});
-
+/*
 	$('body').on('click','.buttonLoad', function() {
 		//кнопку на которую нажали
 		let button = $(this);
@@ -70,7 +70,7 @@ $(document).ready(function() {
 			});
 		}
 	});
-
+*/
 
 	$('.shopWrapper-item').click(function(e) {
 		$('.modal').addClass('is-active');
@@ -106,8 +106,13 @@ $(document).ready(function() {
 });
 
 $(window).on('load',function() {
-  let clock =  $('.clock').FlipClock(3600 * 24 * 3, {
-		clockFace: 'DailyCounter',
-		countdown: true
-	});
+	$('#countdown').timeTo({
+    timeTo: new Date(new Date('Fri Aug 24 2017 17:33:24 GMT+0300 (Финляндия (лето))')),
+    displayDays: 2,
+    theme: "black",
+    displayCaptions: true,
+    fontSize: 48,
+    captionSize: 14,
+    lang: "ru"
+}); 
 });
