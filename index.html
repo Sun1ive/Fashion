@@ -5,18 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- картинка для превью на др сайтах -->
-<!-- <meta name="og:image" content="image"> -->
-<!-- Индексирует страницу -->
+<meta name="og:image" content="image">
 <meta name="robots" content="index,follow">
+<meta name="Author" content="Sunlive">
+<meta name="copyright" content="Fashion landing page">
 <link rel="shortcut icon" href="_img/favicon.ico">
- <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"> -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
- <link rel="stylesheet" href="_libs/flipclock.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.css">
 <link rel="stylesheet" href="_libs/normalize.min.css">
 <!-- <link rel="stylesheet" href="_libs/animate.min.css"> -->
+<link rel="stylesheet" href="_libs/timeTo.css">
 <link rel="stylesheet" href="_styles/style.min.css">
 </head>
 <body>
@@ -63,7 +62,6 @@
 		<a href="#" class="dropdown-item">
 		  Layout
 		</a>
-		<!-- <hr class="dropdown-divider"> -->
 		<a href="#" class="dropdown-item">
 		  More
 		</a>
@@ -304,8 +302,8 @@
 </div>
 	</section>
 	<section class="timers">
-	<div class="timerText">До конца акции -40% осталось:</div>
-	<div class="clock"></div>
+	<div class="timeoff">До конца акции осталось: </div>
+	<div id="countdown"></div>
 	</section>
 
 <section class="form">
@@ -404,7 +402,7 @@
 
 
 <script src="_libs/jquery-3.2.1.min.js"></script>
-<script src="_libs/flipclock.min.js"></script>
+<script src="_libs/jquery.time-to.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="dist/common.min.js"></script>
