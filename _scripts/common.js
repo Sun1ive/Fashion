@@ -72,10 +72,13 @@ $(document).ready(function() {
 	});
 */
 
-	$('.shopWrapper-item').click(function(e) {
+	$('.shopWrapper-item').click(function() {
 		$('.modal').addClass('is-active');
 	});
-	$('.modal-close').click(function(e) {
+	$('.modal-close').click(function() {
+		$('.modal').removeClass('is-active');
+	});
+	$('.modal-background').click(function() {
 		$('.modal').removeClass('is-active');
 	});
 

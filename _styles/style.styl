@@ -347,12 +347,17 @@ main
 	background-color: $beige
 	display flex
 	flex-flow column wrap
-	justify-content center
+	// justify-content center
 	align-items center
+	xs(min-height, 350px)
 	.timeoff
-		margin-bottom 20px
+		text-align center
+		margin 20px 0
+		xs(margin-top, 40px)
 		font(33px,PT Sans,400,#454547)
 	#countdown
+		col-xxs-11()
+		text-align center
 		margin-bottom 35px
 		
 
@@ -387,8 +392,27 @@ main
 		box-shadow: 0px 0px 35px 0px rgba(0,0,0,1);
 
 .promo
-	min-height 300px
+	min-height 200px
 	background-color: $beige
+	.promoContainer
+		max-width 1200px
+		margin 0 auto
+		align-items center
+		min-height inherit
+		flex-wrap wrap
+		display flex
+		justify-content space-around
+		text-align center
+		xxs(flex-direction, column)
+		.promoBox
+			margin 20px 0
+		img
+			padding-bottom 10px
+			transform scale(1.2)
+		h3
+			font(24px,PT Sans,700,#454547)
+		p
+			font-family PT Sans
 
 
 footer
